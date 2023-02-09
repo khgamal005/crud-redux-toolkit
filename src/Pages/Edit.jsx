@@ -1,13 +1,14 @@
 import { useDispatch } from "react-redux";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { editPost } from '../Store/PostSlice';
+import { cleanRecord, editPost } from '../Store/PostSlice';
 import usePostDetails from './../hooks/use-post-details';
 import { useNavigate } from 'react-router-dom';
 import Loading from './../components/Loading';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
@@ -29,7 +30,12 @@ const Edit = () => {
     const navigate = useNavigate();
     const { id } = useParams();
 
-
+    useEffect(() => {
+      return () => {
+        dispatch(cleanRecord());
+      };
+    }, [dispatch]);
+  
 
 
     
@@ -39,12 +45,14 @@ const Edit = () => {
         title: record? record?.title:'',
         description: record?.description
       },
+      enableReinitialize: true,
+
   
       validationSchema :SignupSchema,
   
      
       onSubmit: values => {
-        dispatch(editPost({ id:id, title:values.title, description: values.description })).unwrap().then(()=>{
+        dispatch(editPost({ id:record.id, title:values.title, description: values.description })).unwrap().then(()=>{
        
           navigate('/')
     
