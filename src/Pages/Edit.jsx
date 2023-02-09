@@ -52,7 +52,7 @@ const Edit = () => {
   
      
       onSubmit: values => {
-        dispatch(editPost({ id:record.id, title:values.title, description: values.description })).unwrap().then(()=>{
+        dispatch(editPost({ id:id, title:values.title, description: values.description })).unwrap().then(()=>{
        
           navigate('/')
     
