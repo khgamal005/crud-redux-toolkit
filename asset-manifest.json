@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Leadzen-task/static/css/main.1aacf1e7.css",
-    "main.js": "/Leadzen-task/static/js/main.94cf564e.js",
-    "index.html": "/Leadzen-task/index.html",
-    "main.1aacf1e7.css.map": "/Leadzen-task/static/css/main.1aacf1e7.css.map",
-    "main.94cf564e.js.map": "/Leadzen-task/static/js/main.94cf564e.js.map"
+    "main.css": "/crud-redux-toolkit/static/css/main.1aacf1e7.css",
+    "main.js": "/crud-redux-toolkit/static/js/main.94cf564e.js",
+    "index.html": "/crud-redux-toolkit/index.html",
+    "main.1aacf1e7.css.map": "/crud-redux-toolkit/static/css/main.1aacf1e7.css.map",
+    "main.94cf564e.js.map": "/crud-redux-toolkit/static/js/main.94cf564e.js.map"
   },
   "entrypoints": [
     "static/css/main.1aacf1e7.css",
